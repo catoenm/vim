@@ -7,6 +7,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/YouCompleteMe' 
 Plugin 'joshdick/onedark.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'terryma/vim-multiple-cursors'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -35,18 +37,24 @@ set cursorline
 set scrolloff=25
 set autoindent
 
+nnoremap <c-y> bve
 map <space> /
 map <c-space> ?
 map <silent> , :noh<cr>
+
+set completeopt-=preview
 
 nnoremap <buffer> <F9> :w<cr>:exec '!python' shellescape(@%, 1)<cr>
 nnoremap <c-h> 3h
 nnoremap <c-j> 3j
 nnoremap <c-k> 3k
 nnoremap <c-l> 3l
+
 nmap <C-_> <leader>c<Space>
 vmap <C-_> <leader>c<Space>
 let ctrlp_map = '<c-p>'
 
 filetype plugin on
 let g:NERDSpaceDelims = 1
+
+
