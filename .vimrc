@@ -9,6 +9,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'joshdick/onedark.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -37,6 +38,8 @@ set cursorline
 set scrolloff=25
 set autoindent
 
+set modifiable
+
 nnoremap <c-y> bve
 map <space> /
 map <c-space> ?
@@ -57,4 +60,5 @@ let ctrlp_map = '<c-p>'
 filetype plugin on
 let g:NERDSpaceDelims = 1
 
+nnoremap <F6> :NERDTreeToggle<cr>
 
